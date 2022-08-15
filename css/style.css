@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Quicksand:wght@300&display=swap');
+
+body{
+	font-family: 'Quicksand', sans-serif;
+}
+
+/*Start Header  Section*/
+/*Start Header Intro Section*/
+.headerintros{
+	height: 50px;
+	background-color: darkblue;
+	color: #fff;
+	display: none;
+}
+
+.headerintros .infos{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+@media (min-width: 1200px){
+    
+    .visiblelgs{
+    	display: block;
+    }
+}
+/*End Header Intro Section*/
+
+/*Start Banner Section*/
+.carousel-item{
+	height: 60vh;
+}
+
+.banners1, .banners2, .banners3{
+	background-image: url("../assets/img/banner/banner4.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banners2{
+	background-image: url("../assets/img/banner/banner5.jpg");
+	
+}
+.banners3{
+	background-image: url("../assets/img/banner/banner6.jpg");
+	
+}
+
+.btn-blues{
+	background-color: darkblue;
+	color: #fff;
+}
+/*End Banner Section*/
+/*End Header  Section*/
+
+/*Start Features Section*/
+.iconboxes{
+	background-color: #fff;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+	padding: 50px 20px;
+
+	position: relative;
+}
+
+.icons{
+	width: 70px;
+	height: 70px;
+	background-color: darkcyan;
+	color: #fff;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    position: absolute;
+    left: calc(50% - 35px);
+    top: -35px;
+}
+
+.iconboxes:hover .icons{
+	background: none;
+	color: darkcyan;
+	border: 2px solid darkcyan;
+}
+
+/*End Features Section*/
+
+/*Start Info Section*/
+.fromlefts{
+   animation-name: myleft;
+   animation-duration: 3s;
+}
+
+.fromrights{
+   animation-name: myright;
+   animation-duration: 3s;
+}
+
+@keyframes myleft{
+	from{
+         transform: translateX(-30px);
+         opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes myright{
+	from{
+         transform: translateX(30px);
+         opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+/*End Info Section*/
+
+/*Start ADV Section*/
+.advs{
+	height: 300px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url("../assets/img/banner/banner1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: #fff;
+	text-shadow: -5px 0 10px #000;
+
+	display: flex;
+	align-items: center;
+}
+/*End ADV Section*/
+
+/*Start Departments Section*/
+.deptboxes{
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+
+	position: relative;
+
+	overflow: hidden;
+}
+
+.deptboxes img{
+	width: 100%;
+	object-fit: cover;
+
+	transition: transform .5s;
+}
+
+.deptboxes .contents{
+	width: 80%;
+	height: 100%;
+	background-color: #fff;
+	text-align: center;
+
+	position: absolute;
+	left: 10%;
+	bottom: -90%;
+
+	transition: all .5s;
+}
+
+.deptboxes a{
+	background-color: steelblue;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 20px;
+
+	display: inline-block;
+	margin-top: 10px;
+	opacity: 0;
+
+	transition: all .5s;
+}
+
+.deptboxes:hover .contents{
+	width: 100%;
+	height: 60%;
+
+	left: 0;
+	bottom: 0;
+}
+
+.deptboxes:hover a{
+	opacity: 1;
+	transition-delay: .3s;
+}
+
+.deptboxes:hover img{
+	transform: scale(1.2);
+}
+
+.deptboxes h3{
+	color: steelblue;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding-top: 6px;
+}
+
+.deptboxes p{
+	width: 80%;
+	font-size: 16px;
+	margin: 10px auto;
+}
+/*End Departments Section*/
+
+/*Start Pricing Section*/
+.pricingcards{
+	background-color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+
+    transition: all .5s;
+}
+
+.pricingcards .pricingheaders{
+	padding: 40px 20px;
+	border-bottom: 2px solid #f3f3f3;
+}
+
+.pricingcards .prices{
+	color: blue;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.pricingfeatures ul li{
+	list-style: none;
+	margin: 10px 0;
+}
+
+.btn-pricings{
+	background: linear-gradient(-90deg,skyblue,blue);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 30px;
+}
+
+.btn-pricings:hover{
+	background: linear-gradient(90deg,skyblue,blue);
+	color: #fff;
+}
+
+.pricingcards:hover{
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+	transform: translateY(-20px);
+}
+
+.pricingcards:hover .pricingheaders{
+	background: linear-gradient(90deg,skyblue,blue);
+	color: #fff;
+}
+
+.movelefts{
+	animation-name: movefromleft;
+	animation-duration: 2s;
+}
+
+.moverights{
+	animation-name: movefromright;
+	animation-duration: 2s;
+}
+
+.movebottoms{
+	animation-name: movefrombottom;
+	animation-duration: 2s;
+}
+
+@keyframes movefromleft{
+	from{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes movefromright{
+	from{
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes movefrombottom{
+	from{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+
+/*End Pricing Section*/
+
+/*Start Join Us Section*/
+.customforms{
+	background-color: #ffff;
+	border: 1px solid #dddd;
+	padding: 30px;
+}
+/*End Join Us Section*/
+
+/*Start Footer*/
+.socialicons a{
+	color: #fff;
+	border: 1px solid #f4f4f4;
+	padding: 5px;
+	margin: 0 5px;
+}
+.socialicons a:hover{
+	background-color: blue;
+}
+
+.footerlinks{
+	color: #eee;
+	font-size: 13px;
+	text-decoration: none;
+	transform: all .3s;
+}
+
+.footerlinks:hover{
+	color: orange;
+	border-bottom: 1px solid orange;
+	letter-spacing: 1px;
+}
+/*End Footer*/
+
+/*Start Progress*/
+#progresses{
+    width: 50px;
+    height: 50px;
+    /*background-color: steelblue;*/
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 10;
+}
+
+#progressvalues{
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background-color: #fff;
+	border-radius: 50%;
+
+	font-weight: bold;
+
+	display: grid;
+    place-items: center;
+	
+}
+/*End Progress*/
